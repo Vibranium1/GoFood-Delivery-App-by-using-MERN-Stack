@@ -19,7 +19,7 @@ const FoodCat =  mongoose.model("Food_categorie", foodCatSchema);
 const connectDB = async () => {
   try {
     const MONGO_URL =
-      "mongodb+srv://gofood:rajaisgreat@cluster0.kwm7glo.mongodb.net/gofoodmern?retryWrites=true&w=majority";
+      "mongodb+srv://gofood:<password>@cluster0.kwm7glo.mongodb.net/gofoodmern?retryWrites=true&w=majority";
     await mongoose.connect(MONGO_URL, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
