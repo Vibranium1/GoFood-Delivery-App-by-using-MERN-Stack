@@ -10,8 +10,8 @@ router.post(
   "/createuser",
   [
     body("email", "Incorrect Email").isEmail(),
-    body("name").isLength({ min: 5 }),
-    body("password", "Incorrect Password").isLength({ min: 5 }),
+    body("name"),
+    body("password", "Incorrect Password"),
   ],
   async (req, res) => {
     const errors = validationResult(req);
@@ -40,7 +40,7 @@ router.post(
   "/loginuser",
   [
     body("email", "Incorrect Email").isEmail(),
-    body("password", "Incorrect Password").isLength({ min: 5 }),
+    body("password", "Incorrect Password"),
   ],
   async (req, res) => {
     const errors = validationResult(req);
